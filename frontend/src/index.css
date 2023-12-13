@@ -1,0 +1,69 @@
+main{
+  min-height: 80vh;
+}
+
+
+h3 {
+  pading: 1rem
+}
+
+.rating span{
+     margin: 0.1rem;
+}
+
+/* carousel */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0
+}
+
+.carousel-caption h4 {
+  color: #fff
+}
+
+.carousel img {
+  height: 300px;
+  padding: 30px;
+  border-radius: 50%;
+  margin: 40px auto; /* Center the image horizontally */
+  display: block; /* Ensure the margin: 0 auto works */
+}
+.carousel a {
+  margin: 0 auto
+}
+
+.carousel-indicators {
+  margin-bottom: 10px;
+  padding: 2px 3px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  color: transparent;
+  background: none;
+  border: none;
+  font-size: 0;
+  width: auto;
+}
+
+/* Style for inactive indicators */
+.carousel-indicators li {
+  background-color: #ccc; /* Adjust color for inactive indicators */
+}
+
+/* Style for active indicator */
+.carousel-indicators .active {
+  background-color: #82197b; /* Adjust color for active indicator */
+}
+
+
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
+}
