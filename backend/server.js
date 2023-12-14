@@ -12,7 +12,6 @@ import morgan from 'morgan';
 
 
 dotenv.config();
-connectDB()
 const app = express();
 app.use(express.json())
 
@@ -53,5 +52,16 @@ app.use(errorHandler)
 
 
 const PORT = process.env.PORT || 5000 ;
+
+connectDB()
+    .then(() => {
+        // Connection to MongoDB is successful, listen for requests
+        app.listen(PORT, () => {
+            console.log(`Server is running in ${process.env.NODE_ENV} mode on port ${PORT}`);
+        });
+    })
+    .catch((err) => {
+        console.error('MongoDB connection error:', err);
+    });
 
 app.listen(PORT, console.log(`Server is runnning in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold)); 
